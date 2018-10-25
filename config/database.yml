@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  port: 5432​
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: accouts_db
+  username: root
+  password: 
+test:
+  <<: *default
+  database: accouts_db_test
+  username: root
+  password: 
+production:
+  <<: *default
+  database: accouts_db_production
+  username: root
+  password: <%= ENV['API_DATABASE_PASSWORD'] %>
