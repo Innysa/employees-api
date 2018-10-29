@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-	# include ExceptionHandler
+	include ExceptionHandler
 	include Response
 
   def deserialize(item)

@@ -1,24 +1,23 @@
-# README
+# Empoyees Rails API project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend for Angular Employees Listing
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+```
+2.3.7
+```
 
-* System dependencies
+### Required options
 
-* Configuration
+To create and fill database run:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rake db:create
+```
+```
+rake db:migrate
+```
+```
+rake db:seed
+```
