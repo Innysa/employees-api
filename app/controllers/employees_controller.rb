@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
 
   def index
     @employees = EmployeesQuery.new(params).perform!
-    paginate json: @employees[:result], serializer: ActiveModel::Serializer::CollectionSerializer, include: :department, meta: { total: @employees[:count] }
+    render json: @employees[:result], serializer: ActiveModel::Serializer::CollectionSerializer, include: :department, meta: { total: @employees[:count] }
   end
 
   def create
